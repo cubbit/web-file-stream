@@ -1,6 +1,6 @@
-# Contributing to enigma
+# Contributing to web-file-stream
 
-The following is a set of guidelines for contributing to enigma, which is hosted in the Cubbit Organization on GitHub. These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request as well.
+The following is a set of guidelines for contributing to web-file-stream, which is hosted in the Cubbit Organization on GitHub. These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request as well.
 
 ## Vocabulary
 
@@ -12,7 +12,7 @@ The following is a set of guidelines for contributing to enigma, which is hosted
 
 Feel free to open an issue for any question or problem you may have. Committers or TC may redirect you to other repositories, ask for additional clarifications, and add appropriate metadata before the issue is addressed.
 
-Please be nice and respectful. Every participant is expected to follow our [Code of Conduct](https://github.com/cubbit/enigma/blob/master/CODE_OF_CONDUCT.md).
+Please be nice and respectful. Every participant is expected to follow our [Code of Conduct](https://github.com/cubbit/web-file-stream/blob/master/CODE_OF_CONDUCT.md).
 
 ## Contributions
 
