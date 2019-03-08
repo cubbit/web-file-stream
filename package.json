@@ -1,0 +1,44 @@
+{
+    "name": "@cubbit/web-file-stream",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Node's file stream APIs for the web",
+    "main": "index.js",
+    "scripts": {
+        "lint": "tslint --project tsconfig.json -c tslint.json src/**/*.ts",
+        "pretest": "npm run lint && tsc",
+        "test": "jest --coverage",
+        "test:watch": "jest --watch",
+        "pack": "node -e \"require('./scripts/publish.js').pack()\"",
+        "publish": "node -e \"require('./scripts/publish.js').publish()\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cubbit/web-file-stream.git"
+    },
+    "keywords": [
+        "web",
+        "file",
+        "stream",
+        "node",
+        "read",
+        "write",
+        "cubbit"
+    ],
+    "author": "Cubbit <connect@cubbit.io>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/cubbit/web-file-stream/issues"
+    },
+    "homepage": "https://github.com/cubbit/web-file-stream#readme",
+    "devDependencies": {
+        "@types/jest": "^24.0.9",
+        "@types/node": "^11.10.5",
+        "fs-extra": "^7.0.1",
+        "jest": "^24.3.1",
+        "rimraf": "^2.6.3",
+        "ts-jest": "^24.0.0",
+        "tslint": "^5.13.1",
+        "typescript": "^3.3.3333"
+    }
+}

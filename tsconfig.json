@@ -1,0 +1,25 @@
+
+{
+    "compilerOptions": {
+      "declaration": true,
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "noFallthroughCasesInSwitch": true,
+      "noImplicitReturns": true,
+      "outDir": "build",
+      "pretty": true,
+      "removeComments": true,
+      "sourceMap": false,
+      "strict": true,
+      "strictNullChecks": true,
+      "stripInternal": true,
+      "target": "es6",
+      "typeRoots": [
+        "node_modules/@types"
+      ]
+    },
+    "exclude": [
+      "build",
+      "node_modules"
+    ]
+  }
