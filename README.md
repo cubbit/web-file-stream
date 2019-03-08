@@ -18,7 +18,7 @@ read_stream.on('end', () => console.log('File read!'));
 
 ## Installation
 
-This is a Node.js module available through the npm registry.
+This is a module available through the npm registry.
 Installation is done using the npm install command:
 
 ```bash
