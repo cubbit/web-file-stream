@@ -2,6 +2,11 @@ import {WebFileStream} from '../src';
 
 describe('WebFileStream', () => 
 {
+    beforeEach(() =>
+    {
+        expect.hasAssertions();
+    });
+
     it('should create a readable stream from a file', (done) => 
     {
         const file_content = 'Test file';
@@ -18,7 +23,14 @@ describe('WebFileStream', () =>
 
         read_stream.on('data', (data) => 
         {
-            expect(data).toEqual(Buffer.from(file_content));
+            try
+            {
+                expect(data).toEqual(Buffer.from(file_content));
+            }
+            catch(error)
+            {
+                done(error);
+            }
         });
 
         read_stream.on('end', done);
@@ -30,10 +42,13 @@ describe('WebFileStream', () =>
         const file = new File([file_content], 'test_file', {
             type: 'text/plain',
         });
+
+        const start = 2;
+        const end = file.size - 3;
         
         const read_stream = WebFileStream.create_read_stream(file, {
-            start: 2,
-            end: file_content.length - 3
+            start,
+            end,
         });
 
         read_stream.once('error', (error) =>
@@ -43,9 +58,17 @@ describe('WebFileStream', () =>
 
         read_stream.on('data', (data) => 
         {
-            // Note: -1 due to null-terminating string in text file
-            expect(data).toEqual(Buffer.from(file_content.substring(2, file_content.length - 1))); 
-            read_stream.destroy();
+            const expect_data = Buffer.from(file_content.substring(start, end));
+            
+            try
+            {
+                expect(data.toString()).toEqual(expect_data.toString());
+                read_stream.destroy();
+            }
+            catch(error)
+            {
+                return done(error);
+            }
         });
 
         read_stream.on('close', done);

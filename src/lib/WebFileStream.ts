@@ -27,7 +27,7 @@ export namespace WebFileStream
                     callback(null, new Uint8Array((event.target as any).result));
             };
 
-            const end = cursor + Math.min(chunk_size, max_size);
+            const end = Math.min(cursor + chunk_size, max_size);
             const chunk = file.slice(cursor, end);
 
             reader.readAsArrayBuffer(chunk);
